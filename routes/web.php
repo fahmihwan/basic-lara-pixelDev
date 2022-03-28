@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'index'])->name('post.index');
 
 Route::get('/post/show/{post}', [PublicController::class, 'show'])->name('post.show');
+Route::get('/category/show/{category}', [PublicController::class, 'category'])->name('category.show');
 
 Auth::routes();
 

@@ -9,6 +9,12 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $with = ['posts'];
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
     public function getCategories()
     {
         return Category::all();

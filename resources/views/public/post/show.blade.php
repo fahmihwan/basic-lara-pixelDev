@@ -6,7 +6,7 @@
             <div class="col-md-6 mx-auto text-center">
                 <h1>{{ $show->title }}</h1>
                 <p class="text-muted">{{ $show->created_at->format('d m Y') }} Created By {{ $show->user_id }}
-                    <a href="#">{{ $show->category_id }} </a>
+                    <a href="/category/show/{{ $show->category->id }}">{{ $show->category->name }} </a>
                 </p>
 
             </div>
