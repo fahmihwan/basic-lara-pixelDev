@@ -18,13 +18,14 @@ return new class extends Migration
 
             //noted : harus setting timestamp di file migration supaya ga error pas migrate
             //noted : karena yg hrus di buat category setelah post, maka category harus di up ke atas 
-            $table->unsignedBigInteger('user_id');                              //versi pixeldev
-            $table->foreign('user_id')->references('id')->on('users');          //versi pixeldev
+            // $table->unsignedBigInteger('user_id');                              //versi pixeldev
+            // $table->foreign('user_id')->references('id')->on('users');          //versi pixeldev
 
-            $table->unsignedBigInteger('category_id');                              //versi pixeldev
-            $table->foreign('category_id')->references('id')->on('categories');          //versi pixeldev
+            // $table->unsignedBigInteger('category_id');                              //versi pixeldev
+            // $table->foreign('category_id')->references('id')->on('categories');          //versi pixeldev
 
-
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('category_id')->constrained();
 
             $table->string('title');
             $table->string('slug');
