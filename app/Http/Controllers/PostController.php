@@ -17,6 +17,7 @@ class PostController extends Controller
     {
         $this->postModel = new Post();
         $this->categories = new Category();
+        // $this->middleware('auth'); //<== middleware. dir berada di Middleware/kernel.php
     }
 
     public function index()
